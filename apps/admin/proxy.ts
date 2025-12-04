@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const isLoggedIn = Boolean(request.cookies.get("auth_token")); // adjust cookie name
   const { pathname } = request.nextUrl;
 
