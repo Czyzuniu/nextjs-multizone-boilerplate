@@ -15,6 +15,7 @@
   "dependencies": {
     "@workspace/config": "workspace:*",
     "@workspace/clients": "workspace:*",
+    "@workspace/business": "workspace:*",
     "@workspace/query": "workspace:*",
     "@workspace/types": "workspace:*",
     "@workspace/ui": "workspace:*",

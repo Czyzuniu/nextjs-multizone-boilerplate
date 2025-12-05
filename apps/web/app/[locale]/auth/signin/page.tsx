@@ -1,7 +1,13 @@
 import { GalleryVerticalEnd } from "lucide-react";
 import LoginForm from "../components/login-form";
+import {myContainer} from "@workspace/business/src/ioc/container";
+import {MovieRepository} from "@workspace/business/src/domain/repositories/MovieRepository";
+import {InjectableTypes} from "@workspace/business/src/ioc/types";
 
 export default function SignInPage() {
+  const r = myContainer.get<MovieRepository>(InjectableTypes.MovieRepository);
+  r.getMovies()
+
   return (
     <div className="grid min-h-svh lg:grid-cols-2">
       <div className="flex flex-col gap-4 p-6 md:p-10">
